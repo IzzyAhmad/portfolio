@@ -81,13 +81,23 @@ export default {
   margin: 1em;
 }
 
+/* mobile */
 @media (min-width: 320px) and (max-width: 480px) {
   .typing-container {
     margin-top: 20vh;
-    font-size: 1.8em;
+    font-size: 1.6em;
   }
+
   .button-link {
-  margin: 0.1em;
+    margin: 0.1em;
+  }
 }
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .typing-container {
+    margin-top: 35vh;
+    font-size: 3.5em;
+  }
 }
 </style>

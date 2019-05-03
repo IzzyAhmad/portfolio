@@ -13,7 +13,7 @@
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
-      </a> -->
+      </a>-->
     </div>
 
     <div class="navbar-menu" id="navbarMenu">
@@ -21,7 +21,7 @@
         <!-- <a class="navbar-item">Home</a>
         <a class="navbar-item">Experience</a>
         <a class="navbar-item">Language</a>
-        <a class="navbar-item">Contact</a> -->
+        <a class="navbar-item">Contact</a>-->
       </div>
     </div>
   </nav>
@@ -62,10 +62,19 @@ export default {
   padding-left: 2em;
 }
 
+/* mobile */
 @media (min-width: 320px) and (max-width: 480px) {
   .title-logo {
-  font-size: 2em;
-  padding-left: 0.5em;
+    font-size: 2em;
+    padding-left: 0.5em;
+  }
 }
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .title-logo {
+    font-size: 2.5em;
+    padding-left: 1em;
+  }
 }
 </style>
