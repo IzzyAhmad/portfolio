@@ -3,7 +3,7 @@
     <div class="navbar-brand">
       <a class="navbar-item title-logo" href="#">Izzy .</a>
 
-      <a
+      <!-- <a
         role="button"
         class="navbar-burger burger"
         aria-label="menu"
@@ -13,7 +13,7 @@
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
-      </a>
+      </a> -->
     </div>
 
     <div class="navbar-menu" id="navbarMenu">
@@ -60,5 +60,12 @@ export default {
   font-family: "Nunito";
   font-size: 3em;
   padding-left: 2em;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .title-logo {
+  font-size: 2em;
+  padding-left: 0.5em;
+}
 }
 </style>
