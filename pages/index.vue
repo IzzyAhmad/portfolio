@@ -84,7 +84,10 @@ export default {
 @media (min-width: 320px) and (max-width: 480px) {
   .typing-container {
     margin-top: 20vh;
-    font-size: 2em;
+    font-size: 1.8em;
   }
+  .button-link {
+  margin: 0.1em;
+}
 }
 </style>
