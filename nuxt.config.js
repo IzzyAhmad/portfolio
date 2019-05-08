@@ -23,12 +23,13 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading:  '~/components/PageLoader.vue',
 
   /*
   ** Global CSS
   */
   css: [
+    '~/assets/css/main.sass'
   ],
 
   /*

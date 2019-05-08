@@ -56,10 +56,18 @@ export default {
       ],
       typeSpeed: 80,
       backSpeed: 50,
-      backDelay: 1000,
+      backDelay: 2000,
       loop: true
     });
-  }
+  },
+  // asyncData() {
+  //   // simulate loading for 5 seconds
+  //   return new Promise((resolve) => {
+  //     setTimeout(function () {
+  //       resolve({})
+  //     }, 5000)
+  //   })
+  // }
 };
 </script>
 
