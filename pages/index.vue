@@ -81,7 +81,7 @@ export default {
     border: 2px solid red;
 } */
 .typing-container {
-  margin-top: 40vh;
+  margin-top: 30vh;
   font-size: 4em;
 }
 
@@ -92,8 +92,8 @@ export default {
 /* mobile */
 @media (min-width: 320px) and (max-width: 480px) {
   .typing-container {
-    margin-top: 20vh;
-    font-size: 1.6em;
+    margin-top: 30vh;
+    font-size: 1.5em;
   }
 
   .button-link {

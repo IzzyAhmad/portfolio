@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item title-logo" href="#">Izzy .</a>
+      <a class="navbar-item title-logo" href="#" data-text="{Izzy .}">{Izzy .}</a>
 
       <!-- <a
         role="button"
@@ -57,9 +57,41 @@ export default {
 
 <style>
 .title-logo {
-  font-family: "Nunito";
   font-size: 3em;
+  font-weight: bold;
   padding-left: 2em;
+}
+
+.title-logo::before,
+.title-logo::after {
+  content: attr(data-text);
+  position: absolute;
+  padding-left: 2em;
+  color: inherit;
+  background-color: inherit;
+  overflow: hidden;
+}
+
+.title-logo::before {
+  left: 2px;
+  text-shadow: -1px 0 #ffc0cb;
+  -o-clip-path: inset(100% 0 0% 0);
+  -ms-clip-path: inset(100% 0 0% 0);
+  -moz-clip-path: inset(100% 0 0% 0);
+  -webkit-clip-path: inset(100% 0 0% 0);
+  clip-path: inset(100% 0 0% 0);
+  animation: glitch-anim-2 1s infinite linear alternate-reverse;
+}
+
+.title-logo::after {
+  left: -2px;
+  text-shadow: -1px 0 rgba(0, 255, 255, 0.4);
+  -o-clip-path: inset(100% 0 0% 0);
+  -ms-clip-path: inset(100% 0 0% 0);
+  -moz-clip-path: inset(100% 0 0% 0);
+  -webkit-clip-path: inset(100% 0 0% 0);
+  clip-path: inset(100% 0 0% 0);
+  animation: glitch-anim 0.7s infinite linear alternate-reverse;
 }
 
 /* mobile */
@@ -68,13 +100,229 @@ export default {
     font-size: 2em;
     padding-left: 0.5em;
   }
+
+  .title-logo::before,
+  .title-logo::after {
+    content: attr(data-text);
+    position: absolute;
+    padding-left: 0.5em;
+    color: inherit;
+    background-color: inherit;
+    overflow: hidden;
+  }
 }
 
 /* tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
   .title-logo {
-    font-size: 2.5em;
+    font-size: 4em;
     padding-left: 1em;
+  }
+
+  .title-logo::before,
+  .title-logo::after {
+    content: attr(data-text);
+    position: absolute;
+    padding-left: 1em;
+    color: inherit;
+    background-color: inherit;
+    overflow: hidden;
+  }
+}
+
+@keyframes glitch-anim {
+  0% {
+    -o-clip-path: inset(100% 0 0% 0);
+    -ms-clip-path: inset(100% 0 0% 0);
+    -moz-clip-path: inset(100% 0 0% 0);
+    -webkit-clip-path: inset(100% 0 0% 0);
+    clip-path: inset(100% 0 0% 0);
+  }
+
+  50% {
+    -o-clip-path: inset(100% 0 0% 0);
+    -ms-clip-path: inset(100% 0 0% 0);
+    -moz-clip-path: inset(100% 0 0% 0);
+    -webkit-clip-path: inset(100% 0 0% 0);
+    clip-path: inset(100% 0 0% 0);
+  }
+
+  55% {
+    -o-clip-path: inset(20% 0 30% 0);
+    -ms-clip-path: inset(20% 0 30% 0);
+    -moz-clip-path: inset(20% 0 30% 0);
+    -webkit-clip-path: inset(20% 0 30% 0);
+    clip-path: inset(20% 0 30% 0);
+  }
+
+  60% {
+    -o-clip-path: inset(19% 0 76% 0);
+    -ms-clip-path: inset(19% 0 76% 0);
+    -moz-clip-path: inset(19% 0 76% 0);
+    -webkit-clip-path: inset(19% 0 76% 0);
+    clip-path: inset(19% 0 76% 0);
+  }
+
+  65% {
+    -o-clip-path: inset(30% 0 20% 0);
+    -ms-clip-path: inset(30% 0 20% 0);
+    -moz-clip-path: inset(30% 0 20% 0);
+    -webkit-clip-path: inset(30% 0 20% 0);
+    clip-path: inset(30% 0 20% 0);
+  }
+
+  70% {
+    -o-clip-path: inset(20% 0 60% 0);
+    -ms-clip-path: inset(20% 0 60% 0);
+    -moz-clip-path: inset(20% 0 60% 0);
+    -webkit-clip-path: inset(20% 0 60% 0);
+    clip-path: inset(20% 0 60% 0);
+  }
+
+  75% {
+    -o-clip-path: inset(0% 0 70% 0);
+    -ms-clip-path: inset(0% 0 70% 0);
+    -moz-clip-path: inset(0% 0 70% 0);
+    -webkit-clip-path: inset(0% 0 70% 0);
+    clip-path: inset(0% 0 70% 0);
+  }
+
+  80% {
+    -o-clip-path: inset(80% 0 0% 0);
+    -ms-clip-path: inset(80% 0 0% 0);
+    -moz-clip-path: inset(80% 0 0% 0);
+    -webkit-clip-path: inset(80% 0 0% 0);
+    clip-path: inset(80% 0 0% 0);
+  }
+
+  85% {
+    -o-clip-path: inset(7% 0 20% 0);
+    -ms-clip-path: inset(7% 0 20% 0);
+    -moz-clip-path: inset(7% 0 20% 0);
+    -webkit-clip-path: inset(7% 0 20% 0);
+    clip-path: inset(7% 0 20% 0);
+  }
+
+  90% {
+    -o-clip-path: inset(20% 0 60% 0);
+    -ms-clip-path: inset(20% 0 60% 0);
+    -moz-clip-path: inset(20% 0 60% 0);
+    -webkit-clip-path: inset(20% 0 60% 0);
+    clip-path: inset(20% 0 60% 0);
+  }
+
+  95% {
+    -o-clip-path: inset(30% 0 20% 0);
+    -ms-clip-path: inset(30% 0 20% 0);
+    -moz-clip-path: inset(30% 0 20% 0);
+    -webkit-clip-path: inset(30% 0 20% 0);
+    clip-path: inset(30% 0 20% 0);
+  }
+
+  100% {
+    -o-clip-path: inset(35% 0 50% 0);
+    -ms-clip-path: inset(35% 0 50% 0);
+    -moz-clip-path: inset(35% 0 50% 0);
+    -webkit-clip-path: inset(35% 0 50% 0);
+    clip-path: inset(35% 0 50% 0);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0% {
+    -o-clip-path: inset(100% 0 0% 0);
+    -ms-clip-path: inset(100% 0 0% 0);
+    -moz-clip-path: inset(100% 0 0% 0);
+    -webkit-clip-path: inset(100% 0 0% 0);
+    clip-path: inset(100% 0 0% 0);
+  }
+
+  50% {
+    -o-clip-path: inset(100% 0 0% 0);
+    -ms-clip-path: inset(100% 0 0% 0);
+    -moz-clip-path: inset(100% 0 0% 0);
+    -webkit-clip-path: inset(100% 0 0% 0);
+    clip-path: inset(100% 0 0% 0);
+  }
+
+  55% {
+    -o-clip-path: inset(7% 0 20% 0);
+    -ms-clip-path: inset(7% 0 20% 0);
+    -moz-clip-path: inset(7% 0 20% 0);
+    -webkit-clip-path: inset(7% 0 20% 0);
+    clip-path: inset(7% 0 20% 0);
+  }
+
+  60% {
+    -o-clip-path: inset(50% 0 60% 0);
+    -ms-clip-path: inset(50% 0 60% 0);
+    -moz-clip-path: inset(50% 0 60% 0);
+    -webkit-clip-path: inset(50% 0 60% 0);
+    clip-path: inset(50% 0 60% 0);
+  }
+
+  65% {
+    -o-clip-path: inset(35% 0 50% 0);
+    -ms-clip-path: inset(35% 0 50% 0);
+    -moz-clip-path: inset(35% 0 50% 0);
+    -webkit-clip-path: inset(35% 0 50% 0);
+    clip-path: inset(35% 0 50% 0);
+  }
+
+  70% {
+    -o-clip-path: inset(80% 0 0% 0);
+    -ms-clip-path: inset(80% 0 0% 0);
+    -moz-clip-path: inset(80% 0 0% 0);
+    -webkit-clip-path: inset(80% 0 0% 0);
+    clip-path: inset(80% 0 0% 0);
+  }
+
+  75% {
+    -o-clip-path: inset(5% 0 20% 0);
+    -ms-clip-path: inset(5% 0 20% 0);
+    -moz-clip-path: inset(5% 0 20% 0);
+    -webkit-clip-path: inset(5% 0 20% 0);
+    clip-path: inset(5% 0 20% 0);
+  }
+
+  80% {
+    -o-clip-path: inset(19% 0 60% 0);
+    -ms-clip-path: inset(19% 0 60% 0);
+    -moz-clip-path: inset(19% 0 60% 0);
+    -webkit-clip-path: inset(19% 0 60% 0);
+    clip-path: inset(19% 0 60% 0);
+  }
+
+  85% {
+    -o-clip-path: inset(40% 0 30% 0);
+    -ms-clip-path: inset(40% 0 30% 0);
+    -moz-clip-path: inset(40% 0 30% 0);
+    -webkit-clip-path: inset(40% 0 30% 0);
+    clip-path: inset(40% 0 30% 0);
+  }
+
+  90% {
+    -o-clip-path: inset(19% 0 76% 0);
+    -ms-clip-path: inset(19% 0 76% 0);
+    -moz-clip-path: inset(19% 0 76% 0);
+    -webkit-clip-path: inset(19% 0 76% 0);
+    clip-path: inset(19% 0 76% 0);
+  }
+
+  95% {
+    -o-clip-path: inset(20% 0 60% 0);
+    -ms-clip-path: inset(20% 0 60% 0);
+    -moz-clip-path: inset(20% 0 60% 0);
+    -webkit-clip-path: inset(20% 0 60% 0);
+    clip-path: inset(20% 0 60% 0);
+  }
+
+  100% {
+    -o-clip-path: inset(30% 0 20% 0);
+    -ms-clip-path: inset(30% 0 20% 0);
+    -moz-clip-path: inset(30% 0 20% 0);
+    -webkit-clip-path: inset(30% 0 20% 0);
+    clip-path: inset(30% 0 20% 0);
   }
 }
 </style>
