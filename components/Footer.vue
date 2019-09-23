@@ -2,7 +2,7 @@
   <footer class="footer is-fixed-bottom">
     <div class="content has-text-centered">
       <p>
-        <strong class="glitchy" data-text="{Izzy .}">{Izzy .}</strong> was made with
+        <strong class="glitchy" data-text="{Izzy .}">{Izzy .}</strong> was code with
         <span style="color: #000;">&hearts;</span> by
         <a
           href="https://www.linkedin.com/in/izzyahmad/"

@@ -50,7 +50,7 @@ export default {
   mounted() {
     var typed = new Typed(".typing", {
       strings: [
-        "<strong>Software Developer</strong>.",
+        "<strong>Application Engineer</strong>.",
         "<strong>Front-end Developer</strong>.",
         "<strong>Hackathon Enthusiast</strong>."
       ],
